@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1E0A247-DD17-418A-8C52-BA898080BBA2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DNXServer</RootNamespace>
+    <AssemblyName>DNXServer</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="Npgsql">
+      <HintPath>lib\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJson">
+      <HintPath>lib\LitJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>lib\Mono.Security.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Net\PolicySocket.cs" />
+    <Compile Include="Net\SocketData.cs" />
+    <Compile Include="Util\Log.cs" />
+    <Compile Include="Util\Randomizer.cs" />
+    <Compile Include="Action\Common\SessionData.cs" />
+    <Compile Include="Util\DNXMessage.cs" />
+    <Compile Include="Util\DNXConfig.cs" />
+    <Compile Include="Action\BaseAction.cs">
+      <DependentUpon>BattleAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Action\LoginAction.cs" />
+    <Compile Include="Action\Enum\CommandEnum.cs" />
+    <Compile Include="Action\Enum\LoginSourceEnum.cs" />
+    <Compile Include="Action\MonsterAction.cs" />
+    <Compile Include="Action\Enum\CommandResponseEnum.cs" />
+    <Compile Include="Action\ItemAction.cs" />
+    <Compile Include="Action\BattleAction.cs" />
+    <Compile Include="Action\PettingAction.cs" />
+    <Compile Include="Action\Enum\PettingEnum.cs" />
+    <Compile Include="Action\DropPettingAction.cs" />
+    <Compile Include="Action\BroadcastAction.cs" />
+    <Compile Include="Action\Common\ServerStatus.cs" />
+    <Compile Include="Action\InventoryAction.cs" />
+    <Compile Include="Action\DNXSocket.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Action\UpdateMonsterEquipment.cs" />
+    <Compile Include="Action\CardAction.cs" />
+    <Compile Include="Util\WebsiteRequest.cs" />
+    <Compile Include="Action\Common\RoomData.cs" />
+    <Compile Include="Action\Common\BattleMonsterData.cs" />
+    <Compile Include="Action\Common\BattleItemData.cs" />
+    <Compile Include="Action\Common\SkillData.cs" />
+    <Compile Include="Action\Common\SkillManager.cs" />
+    <Compile Include="Action\Common\SuddenDeath.cs" />
+    <Compile Include="Action\Common\SuddenDeathManager.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="Action\PurchaseAction.cs" />
+    <Compile Include="Util\GooglePlay.cs" />
+    <Compile Include="Action\ShopAction.cs" />
+    <Compile Include="Action\Common\BuffData.cs" />
+    <Compile Include="Action\Common\SkillCooldown.cs" />
+    <Compile Include="Action\Enum\SlotSkillEnum.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Net\" />
+    <Folder Include="Util\" />
+    <Folder Include="Action\" />
+    <Folder Include="Config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\config.sample.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
