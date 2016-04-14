@@ -1,0 +1,17 @@
+D:\dnx\dnxserver\DNXServer\bin\Debug\Config\config.sample.ini
+D:\dnx\dnxserver\DNXServer\bin\Debug\DNXServer.exe
+D:\dnx\dnxserver\DNXServer\bin\Debug\DNXServer.pdb
+D:\dnx\dnxserver\DNXServer\bin\Debug\Npgsql.dll
+D:\dnx\dnxserver\DNXServer\bin\Debug\Mono.Security.dll
+D:\dnx\dnxserver\DNXServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\dnx\dnxserver\DNXServer\obj\x86\Debug\DNXServer.exe
+D:\dnx\dnxserver\DNXServer\obj\x86\Debug\DNXServer.pdb
+D:\server dnx\dnxserver\DNXServer\bin\Debug\Config\config.sample.ini
+D:\server dnx\dnxserver\DNXServer\bin\Debug\DNXServer.exe
+D:\server dnx\dnxserver\DNXServer\bin\Debug\DNXServer.pdb
+D:\server dnx\dnxserver\DNXServer\bin\Debug\Npgsql.dll
+D:\server dnx\dnxserver\DNXServer\bin\Debug\Mono.Security.dll
+D:\server dnx\dnxserver\DNXServer\obj\x86\Debug\DNXServer.exe
+D:\server dnx\dnxserver\DNXServer\obj\x86\Debug\DNXServer.pdb
+D:\server dnx\dnxserver\DNXServer\bin\Debug\LitJson.dll
+D:\server dnx\dnxserver\DNXServer\obj\x86\Debug\DNXServer.csprojResolveAssemblyReference.cache
